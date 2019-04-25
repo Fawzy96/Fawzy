@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView2"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp" />
+
+        <TextView
+            android:id="@+id/transportCompanyName"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/circleImageView2"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_toEndOf="@+id/circleImageView2"
+            android:layout_toRightOf="@+id/circleImageView2"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView3"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignLeft="@+id/transportCompanyName"
+            android:layout_alignStart="@+id/transportCompanyName"
+            android:layout_below="@id/transportCompanyName"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/icon_green" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/circleImageView3"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/circleImageView3"
+            android:layout_toRightOf="@+id/circleImageView3"
+            android:text="PickUp Location :"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignStart="@+id/textView"
+            android:layout_below="@+id/textView"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView4"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+
+            android:layout_alignLeft="@+id/transportCompanyName"
+            android:layout_alignStart="@+id/transportCompanyName"
+            android:layout_below="@id/circleImageView2"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/icon_red" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/circleImageView4"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/circleImageView4"
+            android:layout_toRightOf="@+id/circleImageView4"
+            android:text="Destination :"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_below="@+id/textView2"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iconstart"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignLeft="@id/circleImageView2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/circleImageView2"
+            android:background="@drawable/icon_start" />
+
+        <TextView
+            android:id="@+id/startdatetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_toRightOf="@+id/iconstart"
+            android:text="Start Date :"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:id="@+id/startdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_toRightOf="@+id/startdatetext"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iconend"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_toRightOf="@id/startdate"
+            android:background="@drawable/icon_end" />
+
+        <TextView
+            android:id="@+id/enddatetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_toRightOf="@+id/iconend"
+            android:text="End Date :"
+            android:textColor="@color/redlight"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/enddate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_toRightOf="@+id/enddatetext"
+            android:textColor="@color/redlight"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

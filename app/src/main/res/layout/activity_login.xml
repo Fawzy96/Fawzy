@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mohamedboltia.cargo.login"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:id="@+id/rl_logo"
+        >
+        <ImageView
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:background="@drawable/logo"
+            android:layout_centerInParent="true"
+            android:id="@+id/ig_logooo"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_below="@+id/rl_logo"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:id="@+id/rl_email"
+        >
+        <EditText
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/bar"
+            android:layout_centerInParent="true"
+            android:hint="Email"
+            android:paddingLeft="@dimen/_15sdp"
+            android:textSize="@dimen/_15sdp"
+            android:id="@+id/email"
+            android:inputType="textEmailAddress"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_below="@+id/rl_email"
+        android:id="@+id/rl_password">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:id="@+id/cxx"
+            app:passwordToggleEnabled="true">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="@dimen/_230sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/bar"
+                android:layout_centerInParent="true"
+                android:hint="Password"
+                android:paddingLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_15sdp"
+                android:inputType="textPassword|textNoSuggestions"
+                android:id="@+id/password"
+                android:digits=" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@$#"
+
+                />
+        </android.support.design.widget.TextInputLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/rl_password"
+        android:id="@+id/rl_forpass"
+        >
+
+        <Button
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:background="@drawable/forgetpassword"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/bu_forgetPassword"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/rl_forpass"
+        android:id="@+id/rl_check"
+        >
+
+        <CheckBox
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/check"
+            android:layout_marginLeft="@dimen/_42sdp"
+            android:layout_marginStart="@dimen/_42sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/checkbox"
+            android:layout_marginTop="@dimen/_3sdp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Remember me"
+            android:textSize="@dimen/_20sdp"
+            android:layout_toRightOf="@+id/checkbox"
+            android:layout_toEndOf="@+id/checkbox"
+            android:layout_marginLeft="34dp"
+            android:layout_marginStart="34dp"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_below="@+id/rl_check"
+        android:id="@+id/rl_sign">
+
+        <Button
+            android:id="@+id/bu_signin"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/orange_rectangle"
+            android:layout_centerInParent="true"
+            android:text="Login"
+            android:textStyle="bold"
+
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_below="@id/rl_sign"
+        >
+        <Button
+            android:id="@+id/bu_register"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/orange_rectangle"
+            android:layout_centerInParent="true"
+            android:text="Sign Up"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Confirm_R_Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout14">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="450dp">
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView9"
+                    android:layout_alignTop="@+id/circleImageView7"
+                    android:text="Destination "
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/circleImageView6"
+                    android:layout_centerHorizontal="true"
+                    android:text="Pickup Location"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circleImageView7"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+
+                    android:layout_above="@+id/destinaton"
+                    android:layout_alignStart="@+id/circleImageView6"
+                    android:background="@drawable/icon_red" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circleImageView6"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/lengt"
+                    android:layout_marginBottom="85dp"
+                    android:background="@drawable/icon_green" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="135dp"
+                    android:text="Road Points"
+                    android:textColor="@color/blue"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lengt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/quantit"
+                    android:layout_below="@+id/heigh"
+                    android:hint="Length"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/heigh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/circleImageView7"
+                    android:layout_below="@+id/widt"
+                    android:hint="Height"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/widt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/circleImageView7"
+                    android:layout_centerVertical="true"
+                    android:hint="Width"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView16"
+                    android:layout_centerHorizontal="true"
+                    android:text="Shipment Size"
+                    android:textColor="@color/blue"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView9"
+                    android:layout_below="@+id/circleImageView5"
+                    android:text="Details of Shipment"
+                    android:textColor="@color/blue"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circleImageView5"
+                    android:layout_width="@dimen/_90sdp"
+
+                    android:layout_height="77dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="32dp"
+                    android:layout_toStartOf="@+id/textView27"
+                    android:background="@drawable/circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="17dp"
+                    android:text="Review contract"
+                    android:textColor="@color/blue"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="52dp"
+                    android:hint="company name" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/textView9"
+                    android:layout_marginTop="79dp"
+                    android:hint="Rate" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/circleImageView5"
+                    android:layout_below="@+id/textView13"
+                    android:hint="Cargo Type" />
+
+                <TextView
+                    android:id="@+id/quantit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView17"
+                    android:layout_marginStart="55dp"
+                    android:hint="Quantity"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/weigh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/widt"
+                    android:layout_alignStart="@+id/circleImageView7"
+                    android:hint="Weight"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pickp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView9"
+                    android:layout_below="@+id/circleImageView6"
+                    android:layout_marginTop="-87dp"
+                    android:hint="Pick up" />
+
+                <TextView
+                    android:id="@+id/destinaton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/textView9"
+                    android:hint="Destination" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp">
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="152dp"
+                    android:text="Dates"
+                    android:textColor="@color/blue"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iconend2"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignTop="@+id/starD"
+                    android:layout_toEndOf="@+id/textView25"
+                    android:background="@drawable/icon_end" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iconstart2"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/checkBox"
+                    android:layout_marginTop="52dp"
+                    android:background="@drawable/icon_start" />
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignBottom="@+id/textView7"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="14dp"
+                    android:background="@drawable/checktwo" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="89dp"
+                    android:text="accept term and conditions"
+                    android:textColor="@color/vdarkorang"
+                    android:textSize="19sp" />
+
+                <Button
+                    android:layout_width="164dp"
+                    android:layout_height="45dp"
+
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/orange_rectangle"
+                    android:text="Book"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/starD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/iconstart2"
+                    android:layout_toEndOf="@+id/checkBox"
+                    android:hint="Start Date"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/endd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/textView7"
+                    android:layout_alignTop="@+id/iconend2"
+                    android:hint="End Date"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout14"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/logooo" />
+
+        <Button
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:onClick="back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/left_arrow" />
+    </RelativeLayout>
+</RelativeLayout>

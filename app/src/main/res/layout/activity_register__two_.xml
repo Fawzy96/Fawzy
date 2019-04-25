@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mohamedboltia.cargo.Register_Two_Activity"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:id="@+id/relativeLayout17">
+
+        <Button
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/left_arrow"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:id="@+id/back2"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout17">
+        <ImageView
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="@dimen/_85sdp"
+            android:background="@drawable/logo"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView10"
+            android:layout_toEndOf="@+id/textView10"
+            android:id="@+id/imageView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:layout_marginTop="39dp"
+            android:id="@+id/textView9"
+            android:layout_below="@+id/imageView2"
+            android:layout_alignLeft="@+id/te"
+            android:layout_alignStart="@+id/te" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/te"
+            app:passwordToggleEnabled="true"
+            android:layout_below="@+id/textView9"
+            android:layout_alignLeft="@+id/textView10"
+            android:layout_alignStart="@+id/textView10"
+            android:maxLength="30"
+            >
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/bar"
+                android:paddingLeft="@dimen/_15sdp"
+                android:id="@+id/edPassword"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@$# "
+                android:inputType="textPassword|textNoSuggestions"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_below="@+id/textView9"
+                android:layout_alignLeft="@+id/textView9"
+                android:layout_alignStart="@+id/textView9" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Re-Password"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:id="@+id/textView10"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/te"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/textView10"
+            android:layout_alignLeft="@+id/textView9"
+            android:layout_alignStart="@+id/textView9"
+            android:id="@+id/cx"
+            app:passwordToggleEnabled="true"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/bar"
+                android:paddingLeft="@dimen/_15sdp"
+                android:id="@+id/edRePassword"
+                android:maxLength="30"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_below="@+id/textView10"
+                android:layout_alignLeft="@+id/textView9"
+                android:layout_alignStart="@+id/textView9"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@$# "
+                android:inputType="textPassword|textNoSuggestions"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/orange_rectangle"
+            android:textSize="@dimen/_20sdp"
+            android:text="Next"
+            android:textStyle="bold"
+            android:id="@+id/nextRegisterThree"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_30sdp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

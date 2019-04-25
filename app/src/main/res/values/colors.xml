@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff045684</color>
+    <color name="colorPrimaryDark">#046284</color>
+    <color name="colorAccent">#ff045684</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#d8202a</color>
+    <color name="redDark">#FFA61119</color>
+    <color name="green">#FF209B1A</color>
+    <color name="yellow">#ccb824</color>
+    <color name="mouse">#c99631</color>
+    <color name="redverydark">#FF450609</color>
+    <color name="greendark">#21d718</color>
+    <color name="carry">#9f891a</color>
+    <color name="delvi">#def417</color>
+    <color name="orange">#ffa805</color>
+    <color name="darkorange">#ff5410</color>
+    <color name="gray">#716c6c</color>
+    <color name="dark_blue">#ff045684</color>
+    <color name="redlight">#ffd0021b</color>
+    <color name="vdarkorang">#ffff6f10</color>
+    <color name="black">#000000</color>
+    <color name="blue">#1d6690</color>
+</resources>
