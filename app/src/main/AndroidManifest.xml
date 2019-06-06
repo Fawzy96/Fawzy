@@ -20,12 +20,12 @@
             android:name=".add_payment"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".login" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".new_password" />
@@ -69,7 +69,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Register_Two_Activity" />
-        <activity android:name=".Register_Three_Activity"></activity>
+        <activity android:name=".Register_Three_Activity" />
+        <activity android:name=".Select_Driver_Activity" />
+        <activity android:name=".Select_Truck_Activity"></activity>
     </application>
 
 </manifest>

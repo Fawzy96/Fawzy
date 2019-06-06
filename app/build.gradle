@@ -31,4 +31,5 @@ dependencies {
     implementation 'com.android.support:support-v4:28.+'
     implementation 'de.hdodenhof:circleimageview:2.1.0'
     testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'org.testng:testng:6.9.6'
 }

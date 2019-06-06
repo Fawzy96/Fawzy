@@ -94,7 +94,7 @@ public class Register_one_Activity extends AppCompatActivity {
                     shared.commit();
 
                     Intent intent = new Intent(Register_one_Activity.this
-                            ,Register_Two_Activity.class);
+                            ,Drawer_Slide_Activity.class);
 
                     startActivity(intent);
 
