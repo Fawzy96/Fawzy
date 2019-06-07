@@ -4,184 +4,198 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mohamedboltia.cargo.add_new_warehouse"
-    android:background="@drawable/darkbg">
+    android:background="@drawable/darkbg"
+    tools:context="com.mohamedboltia.cargo.add_new_warehouse">
+
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
-        android:background="@color/colorAccent"
-        android:id="@+id/relativeLayout">
+        android:background="@color/colorAccent">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/logooo"
             android:layout_centerInParent="true"
-            />
+            android:background="@drawable/logooo" />
+
         <Button
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
-            android:background="@drawable/left_arrow"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            />
+            android:background="@drawable/left_arrow" />
     </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/relativeLayout9"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
-        android:layout_below="@+id/relativeLayout"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:id="@+id/relativeLayout9">
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="@dimen/_10sdp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add New WareHouse"
             android:layout_centerInParent="true"
-            android:textSize="@dimen/_17sdp"
+            android:text="Add New WareHouse"
             android:textColor="@color/darkorange"
-            android:textStyle="bold"
-            />
+            android:textSize="@dimen/_17sdp"
+            android:textStyle="bold" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            >
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
             <Button
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_30sdp"
-                android:background="@drawable/puls"
-                android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/_10sdp"/>
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/puls" />
         </RelativeLayout>
     </RelativeLayout>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/_100sdp"
-    android:layout_below="@+id/relativeLayout9"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:id="@+id/relativeLayout10">
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="@dimen/_110sdp"
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout10"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_100sdp"
-        android:layout_centerInParent="true"
-        android:background="@drawable/circle"
-        android:id="@+id/circleImageView" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/avatar"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-</RelativeLayout>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout9">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/avatar" />
+    </RelativeLayout>
+
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginTop="@dimen/_12sdp"
         android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/relativeLayout10"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_marginTop="@dimen/_12sdp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_22sdp"
             android:text="Name"
-            android:textSize="@dimen/_15sdp"
             android:textColor="@color/white"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/_22sdp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"/>
+            android:textSize="@dimen/_15sdp" />
     </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/relativeLayout4"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
-        android:layout_below="@+id/relativeLayout3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/relativeLayout4">
+        android:layout_below="@+id/relativeLayout3">
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bar"
-            android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginEnd="@dimen/_20sdp"
-            android:paddingLeft="@dimen/_15sdp"/>
+            android:layout_marginStart="@dimen/_20sdp"
+            android:background="@drawable/bar"
+            android:paddingLeft="@dimen/_15sdp" />
     </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/relativeLayout5"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_30sdp"
-        android:layout_below="@+id/relativeLayout4"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/relativeLayout5">
+        android:layout_below="@+id/relativeLayout4">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_22sdp"
             android:text="Location"
-            android:textSize="@dimen/_15sdp"
             android:textColor="@color/white"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/_22sdp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"/>
+            android:textSize="@dimen/_15sdp" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/relativeLayout6"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
-        android:layout_below="@+id/relativeLayout5"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/relativeLayout6">
+        android:layout_below="@+id/relativeLayout5">
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bar"
-            android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginEnd="@dimen/_20sdp"
-            android:paddingLeft="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:background="@drawable/bar"
             android:inputType="datetime"
-            />
+            android:paddingLeft="@dimen/_15sdp" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/relativeLayout7"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_30sdp"
-        android:layout_below="@+id/relativeLayout6"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/relativeLayout7">
+        android:layout_below="@+id/relativeLayout6">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Maximum Size"
-            android:textSize="@dimen/_15sdp"
-            android:textColor="@color/white"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/_22sdp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"/>
+            android:text="Maximum Size"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/relativeLayout8"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
-        android:layout_below="@+id/relativeLayout7"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/relativeLayout8">
+        android:layout_below="@+id/relativeLayout7">
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bar"
-            android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginEnd="@dimen/_20sdp"
-            android:paddingLeft="@dimen/_15sdp"
-            android:inputType="number"/>
+            android:layout_marginStart="@dimen/_20sdp"
+            android:background="@drawable/bar"
+            android:inputType="number"
+            android:paddingLeft="@dimen/_15sdp" />
     </RelativeLayout>
 </RelativeLayout>
