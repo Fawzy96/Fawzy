@@ -8,12 +8,7 @@
     android:background="@drawable/bg"
     >
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp"
-        android:id="@+id/rl_logo_welcome"
-        android:layout_centerInParent="true"
-        >
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,7 +16,7 @@
             android:layout_centerInParent="true"
             android:id="@+id/ig_logoo"
             />
-    </RelativeLayout>
+
 
 
 </RelativeLayout>

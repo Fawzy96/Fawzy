@@ -113,7 +113,8 @@
         android:id="@+id/constraintLayout"
         android:layout_width="384dp"
         android:layout_height="64dp"
-        android:background="@drawable/very_dark_regtangel">
+        android:background="@drawable/very_dark_regtangel"
+        >
 
         <Button
             android:id="@+id/button6"

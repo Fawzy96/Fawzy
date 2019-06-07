@@ -65,7 +65,7 @@ public class Register_Two_Activity extends AppCompatActivity {
                     shared.putString("RTRePassword", RTRePassword);
                     shared.commit();
 
-                    Intent intent = new Intent(Register_Two_Activity.this,Register_Three_Activity.class);
+                    Intent intent = new Intent(Register_Two_Activity.this,login.class);
                     startActivity(intent);
 
                 }
