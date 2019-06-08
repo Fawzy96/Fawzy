@@ -40,6 +40,10 @@
         <activity android:name=".import_export_profile" />
         <activity android:name=".Confirm_R_Activity" />
         <activity android:name=".Show_Activity" />
+        <activity android:name=".Add_New_Driver" />
+        <activity android:name=".Add_New_Truck" />
+        <activity android:name=".Register_Two_Activity" />
+        <activity android:name=".Register_Three_Activity"/>
         <activity
             android:name=".Drawer_Slide_Activity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -68,8 +72,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register_Two_Activity" />
-        <activity android:name=".Register_Three_Activity"></activity>
+
     </application>
 
 </manifest>
