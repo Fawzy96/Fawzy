@@ -170,146 +170,154 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/_180sdp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="36dp"
-            android:background="@drawable/very_dark_regtangel">
+            android:layout_marginTop="51dp"
+            android:background="@drawable/very_dark_regtangel"
+            android:layout_below="@+id/relativeLayout15"
+            android:layout_alignLeft="@+id/relativeLayout15"
+            android:layout_alignStart="@+id/relativeLayout15"
+            android:layout_alignRight="@+id/relativeLayout15"
+            android:layout_alignEnd="@+id/relativeLayout15">
 
             <TextView
-                android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_20sdp"
                 android:text="Email : "
-                android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_20sdp"
+                android:id="@+id/textView6"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:layout_toRightOf="@+id/textView6"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
-
+                android:layout_marginTop="@dimen/_20sdp"
+                android:id="@+id/emailprofile"
+                />
             <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line"
                 android:id="@+id/rl_line3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_below="@+id/textView6"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/line"></RelativeLayout>
-
+                ></RelativeLayout>
             <TextView
-                android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rl_line3"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_10sdp"
                 android:text="Phone : "
-                android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/textView7"
                 android:layout_below="@+id/rl_line3"
-                android:layout_marginTop="@dimen/_10sdp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:layout_toRightOf="@+id/textView7"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
-
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@+id/rl_line3"
+                android:id="@+id/phoneProfile"
+                />
             <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line"
                 android:id="@+id/rl_line4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_below="@+id/textView7"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView7"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/line"></RelativeLayout>
-
+                ></RelativeLayout>
             <TextView
-                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rl_line4"
+                android:text="Address : "
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="Address : "
-                android:textColor="@color/white"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
-
+                android:id="@+id/textView11"
+                android:layout_below="@+id/rl_line4"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rl_line4"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_toRightOf="@+id/textView11"
-                android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/textView11"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@+id/rl_line4"
+                android:id="@+id/addressProfile"
+                />
 
             <RelativeLayout
-                android:id="@+id/rl_line8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/line"
+                android:id="@+id/rl_line8"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_below="@+id/textView11"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView11"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/line"></RelativeLayout>
-
+                ></RelativeLayout>
             <TextView
-                android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rl_line8"
+                android:text="Password : "
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="Password : "
-                android:textColor="@color/white"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
-
+                android:id="@+id/textView12"
+                android:layout_below="@+id/rl_line8"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rl_line8"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_toRightOf="@+id/textView12"
-                android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
-
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/textView12"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@+id/rl_line8"
+                android:id="@+id/passwordProfile"
+                />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/rl_line8"
+                android:textSize="@dimen/_12sdp"
+                android:text="Change Password?"
+                android:textColor="@color/darkorange"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:background="@color/blue"
                 android:layout_alignParentBottom="true"
                 android:layout_alignRight="@+id/rl_line8"
-                android:layout_marginBottom="@dimen/_1sdp"
-                android:background="@color/blue"
-                android:text="Change Password?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                android:textColor="@color/darkorange"
-                android:textSize="@dimen/_12sdp"
-                android:textStyle="bold" />
+                android:layout_alignEnd="@+id/rl_line8"
+                android:layout_marginBottom="@dimen/_1sdp"/>
 
         </RelativeLayout>
 
