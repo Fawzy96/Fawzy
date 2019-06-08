@@ -50,7 +50,7 @@ public class Drawer_Slide_Activity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.drawer__slide_, menu);
+        getMenuInflater().inflate(R.menu.driver_profile, menu);
         return true;
     }
 
@@ -78,9 +78,9 @@ public class Drawer_Slide_Activity extends AppCompatActivity
         if (id == R.id.nav_profile) {
             Intent i = new Intent(Drawer_Slide_Activity.this,import_export_profile.class);
             startActivity(i);
-        } else if (id == R.id.Book_Transporter) {
+        } /*else if (id == R.id.Book_Transporter) {
 
-        }  else if (id == R.id.payment) {
+        } */ else if (id == R.id.payment) {
             Intent i = new Intent(Drawer_Slide_Activity.this,add_payment.class);
             startActivity(i);
 
