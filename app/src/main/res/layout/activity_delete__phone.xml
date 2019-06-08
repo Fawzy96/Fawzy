@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_Phone"
+    android:background="@drawable/bg_two">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relativeLayout144">
+        <Button
+            android:id="@+id/bu_signin"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/orange_rectangle"
+            android:layout_centerInParent="true"
+            android:text="Delete"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/colorAccent"
+        android:id="@+id/relativeLayout140">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logooo"
+            android:layout_centerInParent="true"
+            />
+        <Button
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/left_arrow"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:layout_below="@id/relativeLayout140"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:background="@drawable/lightimage"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:id="@+id/relativeLayout144"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+
+
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/relativeLayout141">
+
+
+            <EditText
+                android:layout_width="@dimen/_230sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/bar"
+                android:layout_centerInParent="true"
+                android:hint="search"
+                android:textSize="@dimen/_12sdp"
+                android:paddingLeft="@dimen/_15sdp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_240sdp"
+            android:layout_below="@id/relativeLayout141"
+            android:id="@+id/relativeLayout142"
+            >
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listtwo"
+                ></ListView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
