@@ -1,5 +1,9 @@
 package com.mohamedboltia.cargo;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -13,6 +17,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class Mapp_Activity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+   // private static final int Location_request = 500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +42,23 @@ public class Mapp_Activity extends FragmentActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+      /*  if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            ActivityCompat.requestPermissions(this,new String[] {Manifest.permission.ACCESS_FINE_LOCATION},Location_request);
+            return;
+        }
+        mMap.setMyLocationEnabled(true);*/
         // Add a marker in Sydney and move the camera
-     //   LatLng sydney = new LatLng(30.04306302, 31.31075456);
-      //  mMap.addMarker(new MarkerOptions().position(sydney).title("Cairo"));
-      //  mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+      //  LatLng sydney = new LatLng(30.04306302, 150.31075456);
+      // mMap.addMarker(new MarkerOptions().position(sydney).title("No where"));
+        //mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
+
+  /*  @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+       switch (requestCode){
+           case Location_request :
+               if (grantResults.length >0 && )
+       }
+    }*/
 }

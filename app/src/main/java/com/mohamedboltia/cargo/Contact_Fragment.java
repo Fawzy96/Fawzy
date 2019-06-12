@@ -1,9 +1,13 @@
 package com.mohamedboltia.cargo;
 
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,8 +17,11 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.ArrayList;
 
 
 /**
@@ -23,11 +30,12 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class Contact_Fragment extends Fragment implements OnMapReadyCallback {
 
     GoogleMap map;
+    private static final int Location_request = 500;
+    ArrayList<LatLng> list_points;
+
     public Contact_Fragment() {
         // Required empty public constructor
     }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -40,16 +48,61 @@ public class Contact_Fragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        SupportMapFragment mapFragment =(SupportMapFragment)getChildFragmentManager()
+        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
                 .findFragmentById(R.id.map3);
         mapFragment.getMapAsync(this);
+        list_points = new ArrayList<>();
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-      map = googleMap;
-        LatLng cairo = new LatLng(30.03855885, 31.21205711);
+        map = googleMap;
+       /* LatLng cairo = new LatLng(30.03855885, 31.21205711);
         map.addMarker(new MarkerOptions().position(cairo).title("Cairo"));
-        map.moveCamera(CameraUpdateFactory.newLatLng(cairo));
+        map.moveCamera(CameraUpdateFactory.newLatLng(cairo));*/
+        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(getActivity(),new String[] {Manifest.permission.ACCESS_FINE_LOCATION},Location_request);
+
+            return;
+        }
+        map.setMyLocationEnabled(true);
+        map.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
+            @Override
+            public void onMapLongClick(LatLng latLng) {
+                //Reset marker when already 2
+                if (list_points.size() == 2){
+                    list_points.clear();
+                    map.clear();
+                }
+                //save first point select
+                list_points.add(latLng);
+                //create marker
+                MarkerOptions markerOptions = new MarkerOptions();
+                markerOptions.position(latLng);
+                if (list_points.size() == 1){
+                    //Add first marker to map
+                    markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+                }else {
+                    //Add second marker
+                    markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+                }
+                map.addMarker(markerOptions);
+                //todo : request get directions code bellow    
+            }
+        });
+     //  map.getUiSettings().setZoomControlsEnabled(true);
+
+    }
+
+    @SuppressLint("MissingPermission")
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode){
+            case Location_request :
+                if (grantResults.length >0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    map.setMyLocationEnabled(true);
+                }
+                break;
+        }
     }
 }
