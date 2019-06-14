@@ -10,7 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class login extends AppCompatActivity {
+import com.mohamedboltia.cargo.Model.User;
+import com.mohamedboltia.cargo.Presenter.Login_Presenter;
+import com.mohamedboltia.cargo.View.LoginView;
+
+public class login extends AppCompatActivity implements LoginView {
+
 
     EditText emailValidate;
     TextInputEditText password;
@@ -19,6 +24,7 @@ public class login extends AppCompatActivity {
     String emaill,passworrd;
     AlertDialog.Builder dlgAlert;
 
+    Login_Presenter login_presenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +37,7 @@ public class login extends AppCompatActivity {
     public void initi()
     {
 
+        login_presenter=new Login_Presenter(this,this);
         emailValidate=(EditText)findViewById(R.id.email);
         password=(TextInputEditText)findViewById(R.id.password);
         login=(Button)findViewById(R.id.bu_signin);
@@ -66,23 +73,24 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                SharedPreferences shared=getSharedPreferences( "reg",MODE_PRIVATE);
-                 emaill =shared.getString("CompEmail","");
-                passworrd=shared.getString("RTPassword","");
+//                SharedPreferences shared=getSharedPreferences( "reg",MODE_PRIVATE);
+//                 emaill =shared.getString("CompEmail","");
+//                passworrd=shared.getString("RTPassword","");
 
-              if(emailValidate.getText().toString().equals(emaill) && password.getText().toString().equals(passworrd))
-              {
-                  Intent intent = new Intent(login.this,Drawer_Slide_Activity.class);
+                login_presenter.login(emailValidate.getText().toString(),password.getText().toString());
 
-                    startActivity(intent);
-              }
-              else
-              {
 
-                  dlgAlert.setMessage("user name or password is error");
-                  dlgAlert.show();
-
-              }
+//              if(emailValidate.getText().toString().equals(emaill) && password.getText().toString().equals(passworrd))
+//              {
+//
+//              }
+//              else
+//              {
+//
+//                  dlgAlert.setMessage("user name or password is error");
+//                  dlgAlert.show();
+//
+//              }
 
 //                validemail = "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
 //
@@ -128,4 +136,27 @@ public class login extends AppCompatActivity {
 //                }
             }});
 }
+
+    @Override
+    public void success(User userRegister) {
+//
+//        SharedPreferences.Editor shared = getSharedPreferences("reg", MODE_PRIVATE).edit();
+//        shared.putString("token", userRegister.getEmail());
+//        shared.commit();
+        Intent intent = new Intent(login.this,Drawer_Slide_Activity.class);
+
+        startActivity(intent);
+    }
+
+    @Override
+    public void Token(String token) {
+        SharedPreferences.Editor shared = getSharedPreferences("reg", MODE_PRIVATE).edit();
+        shared.putString("token", token);
+        shared.commit();
+    }
+
+    @Override
+    public void Error() {
+
+    }
 }

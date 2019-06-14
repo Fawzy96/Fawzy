@@ -19,16 +19,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".welcome"
+            android:name=".login"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Drawer_Slide_Activity" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <!--<activity android:name=".Drawer_Slide_Activity" >-->
+        <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
         <activity android:name=".MainActivity" />
         <activity android:name=".new_password" />
         <activity android:name=".verify_email" />
@@ -46,8 +46,9 @@
         <activity android:name=".Add_New_Truck" />
         <activity android:name=".Register_Two_Activity" />
         <activity android:name=".Register_Three_Activity"/>
+       <activity android:name=".Drawer_Slide_Activity"/>
         <activity
-            android:name=".login"
+            android:name=".Register_one_Activity"
             android:theme="@style/AppTheme.NoActionBar" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -67,7 +68,7 @@
         <activity
             android:name=".Mapp_Activity"
             android:label="@string/title_activity_mapp_" />
-        <activity android:name=".Register_one_Activity">
+        <activity android:name=".welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

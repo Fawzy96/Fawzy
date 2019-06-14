@@ -1,11 +1,13 @@
 package com.mohamedboltia.cargo;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class welcome extends AppCompatActivity {
-
+   String Token;
+   SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,9 +29,19 @@ public class welcome extends AppCompatActivity {
                 }
                 finally
                 {
-                    Intent intent = new Intent(welcome.this, login.class);
+                    sharedPreferences=getSharedPreferences("reg",MODE_PRIVATE);
+                    Token=sharedPreferences.getString("token",null);
+                    if(Token!=null) {
+                        Intent intent = new Intent(welcome.this, Drawer_Slide_Activity.class);
 
-                    startActivity(intent);
+                        startActivity(intent);
+                    }else {
+
+                        Intent intent = new Intent(welcome.this, login.class);
+
+                        startActivity(intent);
+
+                    }
 
 
 

@@ -65,7 +65,7 @@ public class Register_Two_Activity extends AppCompatActivity {
                     shared.putString("RTRePassword", RTRePassword);
                     shared.commit();
 
-                    Intent intent = new Intent(Register_Two_Activity.this,login.class);
+                    Intent intent = new Intent(Register_Two_Activity.this,Register_Three_Activity.class);
                     startActivity(intent);
 
                 }
@@ -75,6 +75,7 @@ public class Register_Two_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Register_Two_Activity.this,Register_one_Activity.class);
+//                intent.putExtra("name",edPassword.getText().toString());
                 startActivity(intent);
             }
         });

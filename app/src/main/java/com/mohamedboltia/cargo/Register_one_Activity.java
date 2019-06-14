@@ -26,7 +26,7 @@ public class Register_one_Activity extends AppCompatActivity {
 
     public void initi()
     {
-
+//       String Name=getIntent().getStringExtra("name");
         companyName=(EditText)findViewById(R.id.editText12);
         CompanyEmail=(EditText)findViewById(R.id.editText13);
         Phone=(EditText)findViewById(R.id.editText15);
