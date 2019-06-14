@@ -32,7 +32,7 @@ public class welcome extends AppCompatActivity {
                     sharedPreferences=getSharedPreferences("reg",MODE_PRIVATE);
                     Token=sharedPreferences.getString("token",null);
                     if(Token!=null) {
-                        Intent intent = new Intent(welcome.this, Drawer_Slide_Activity.class);
+                        Intent intent = new Intent(welcome.this, Request.class);
 
                         startActivity(intent);
                     }else {

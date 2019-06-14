@@ -143,7 +143,7 @@ public class login extends AppCompatActivity implements LoginView {
 //        SharedPreferences.Editor shared = getSharedPreferences("reg", MODE_PRIVATE).edit();
 //        shared.putString("token", userRegister.getEmail());
 //        shared.commit();
-        Intent intent = new Intent(login.this,Drawer_Slide_Activity.class);
+        Intent intent = new Intent(login.this,Request.class);
 
         startActivity(intent);
     }
