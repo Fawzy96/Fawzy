@@ -1,5 +1,6 @@
 package com.mohamedboltia.cargo;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,11 +9,12 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.mohamedboltia.cargo.Presenter.Requset_Presenter;
+import com.mohamedboltia.cargo.View.RequsetView;
 
-public class Confirm_R_Activity extends AppCompatActivity {
+public class Confirm_R_Activity extends AppCompatActivity implements RequsetView {
 
     private TextView tv_quantity,tv_weight,tv_width,tv_length,
-            tv_height,tv_Pickup,tv_destination,tv_StartD,tv_EndD,Cargo_type;
+            tv_height,tv_Pickup,tv_destination,tv_StartD,tv_EndD;
 
     Button Book;
     Requset_Presenter requset_presenter;
@@ -25,7 +27,7 @@ public class Confirm_R_Activity extends AppCompatActivity {
     String StartD;
     String EndD;
     String height;
-    String cargoType;
+    String token;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,23 +42,21 @@ public class Confirm_R_Activity extends AppCompatActivity {
         tv_StartD      = (TextView) findViewById(R.id.starD);
         tv_EndD        = (TextView) findViewById(R.id.endd);
         Book           =  (Button)  findViewById(R.id.Book);
-        Cargo_type=(TextView)findViewById(R.id.textView16);
-//        requset_presenter=new Requset_Presenter(this,this);
+        requset_presenter=new Requset_Presenter(this,this);
 
 //        SharedPreferences shared=getSharedPreferences( "reg",MODE_PRIVATE);
 //        token =shared.getString("token","");
 
         SharedPreferences file = getSharedPreferences("content",MODE_PRIVATE);
-        tv_quantity   .setText("Quantity    : "+file.getString("quan",null)+"  "+file.getString("spinner1",null));
-        tv_weight     .setText("Weight      : "+file.getString("weig",null)+"  "+file.getString("spinner2",null));
-        tv_width      .setText("Width        : "+file.getString("wid",null)+"  "+file.getString("spinner5",null));
-        tv_length     .setText("Length     : "+file.getString("len",null)+"  "+file.getString("spinner4",null));
-        tv_height     .setText("Height      : "+file.getString("heig",null)+"  "+file.getString("spinner5",null));
+        tv_quantity   .setText("Quantity    : "+file.getString("quan",null));
+        tv_weight     .setText("Weight      : "+file.getString("weig",null));
+        tv_width      .setText("Width        : "+file.getString("wid",null));
+        tv_length     .setText("Length     : "+file.getString("len",null));
+        tv_height     .setText("Height      : "+file.getString("heig",null));
         tv_Pickup     .setText("Pick up     : "+file.getString("pick",null));
         tv_destination.setText("Destination : "+file.getString("dest",null));
         tv_StartD     .setText("Start Date :"+file.getString("sdate",null));
         tv_EndD       .setText("End Date :"+file.getString("edate",null));
-        Cargo_type    .setText("Cargo Type :"+file.getString("type",null));
 
         quantity=tv_quantity.getText().toString();
         weight=tv_weight.getText().toString();
@@ -66,8 +66,6 @@ public class Confirm_R_Activity extends AppCompatActivity {
         StartD=tv_StartD.getText().toString();
         EndD=tv_EndD.getText().toString();
         height=tv_height.getText().toString();
-        cargoType=Cargo_type.getText().toString();
-
 
 
 
@@ -106,16 +104,16 @@ public class Confirm_R_Activity extends AppCompatActivity {
 //        Intent intent = new Intent(Confirm_R_Activity.this,Request.class);
 //        startActivity(intent);
 //    }
-//
-//    @Override
-//    public void success() {
-//        Intent intent = new Intent(Confirm_R_Activity.this,Add_New_Truck.class);
-//        startActivity(intent);
-//        finish();
-//    }
-//
-//    @Override
-//    public void Error() {
-//
-//    }
+
+    @Override
+    public void success() {
+        Intent intent = new Intent(Confirm_R_Activity.this,Add_New_Truck.class);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public void Error() {
+
+    }
 }
