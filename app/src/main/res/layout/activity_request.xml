@@ -262,9 +262,11 @@
             android:layout_alignStart="@+id/textView5"
             android:layout_marginTop="@dimen/_10sdp"
             android:id="@+id/sdate"
-            android:inputType="date"/>
+            android:inputType="datetime"
+            android:paddingLeft="@dimen/_20sdp"
+            android:textSize="@dimen/_15sdp"/>
         <EditText
-            android:inputType="date"
+            android:inputType="datetime"
             android:layout_width="@dimen/_130sdp"
             android:layout_height="@dimen/_33sdp"
             android:background="@drawable/regtan"
@@ -272,7 +274,9 @@
             android:layout_alignLeft="@+id/textView6"
             android:layout_alignStart="@+id/textView6"
             android:layout_marginRight="@dimen/_10sdp"
-            android:id="@+id/edate" />
+            android:id="@+id/edate"
+            android:paddingLeft="@dimen/_20sdp"
+            android:textSize="@dimen/_15sdp"/>
 
         <CheckBox
             android:id="@+id/checkBox"
@@ -282,7 +286,7 @@
             android:layout_alignStart="@+id/sdate"
             android:layout_below="@+id/sdate"
             android:layout_marginTop="@dimen/_15sdp"
-            android:background="@color/white" />
+             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -294,11 +298,10 @@
             android:id="@+id/textView7" />
 
         <Button
-            android:layout_width="223dp"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_below="@+id/textView7"
             android:layout_centerHorizontal="true"
-
             android:layout_marginTop="@dimen/_20sdp"
             android:background="@drawable/orange_rectangle"
             android:onClick="Next"
