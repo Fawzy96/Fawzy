@@ -19,8 +19,10 @@ public class Requset_Presenter {
 
 
 
+
     RequsetView requsetView;
 //    public String header = "Authorization" : "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEzMywiaXNzIjoiaHR0cDovLzUyLjU5LjIzMS41OC9hcGkvdXNlci9sb2dpbiIsImlhdCI6MTU2MDUzMzE4MSwiZXhwIjo3NTYwNTMzMTgxLCJuYmYiOjE1NjA1MzMxODEsImp0aSI6IlZlWjRpQ2JGbEgwVENiTk0ifQPH4b1oSnO1eo90HJg5qjpdExGOLzInBTX-aK6UqoP9w";
+  //   Map<String,String> header = new HashMap<>();
 
 
     public Requset_Presenter(Context context, RequsetView requsetView) {
@@ -29,7 +31,7 @@ public class Requset_Presenter {
     }
 
     public void requset(Request Re) {
-        Map<String, String> queryMap = new HashMap<>();
+        Map<String, Object> queryMap = new HashMap<>();
         queryMap.put("Cargo_type", Re.getCargoType());
         queryMap.put("Pick_Up_Location", Re.getPickUpLocation());
         queryMap.put("Deliver_To", Re.getDeliverTo());
@@ -41,11 +43,11 @@ public class Requset_Presenter {
         queryMap.put("start_date", Re.getStartDate());
         queryMap.put("finish_date", Re.getFinishDate());
         queryMap.put("Total_Weight", Re.getTotalWeight());
-        queryMap.put("Total_Volume", Re.getTotalVolume().toString());
+      //  queryMap.put("Total_Volume", Re.getTotalVolume().toString());
         queryMap.put("company_import_export",Re.getCompanyImportExport().toString());
-        queryMap.put("CreatedAt", Re.getCreatedAt());
-        queryMap.put("UpdatedAt", Re.getUpdatedAt());
-        queryMap.put("id", Re.getId().toString());
+     //   queryMap.put("CreatedAt", Re.getCreatedAt());
+     //   queryMap.put("UpdatedAt", Re.getUpdatedAt());
+      //  queryMap.put("id", Re.getId().toString());
 
         Apiinterface apiInterface = ApiCLint.getClient().create(Apiinterface.class);
         Call<RequestResponse> call = apiInterface.request(queryMap);

@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.mohamedboltia.cargo.Presenter.Requset_Presenter;
 import com.mohamedboltia.cargo.View.RequsetView;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Request extends AppCompatActivity implements RequsetView {
+
 
     private EditText et_quantity,et_weight,et_width,et_length,
             et_height,et_Pickup,et_destination,et_StartD,et_EndD;
@@ -39,59 +41,59 @@ public class Request extends AppCompatActivity implements RequsetView {
         requset_presenter=new Requset_Presenter(this,this);
 
         spinner();spinner1();spinner2();spinner5();spinner4();
-        SharedPreferences shared=getSharedPreferences( "reg",MODE_PRIVATE);
-        token =shared.getString("token","");
+     //   SharedPreferences shared=getSharedPreferences( "reg",MODE_PRIVATE);
+     //   token =shared.getString("token","Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEzMywiaXNzIjoiaHR0cDovLzUyLjU5LjIzMS41OC9hcGkvdXNlci9sb2dpbiIsImlhdCI6MTU2MDUzMzE4MSwiZXhwIjo3NTYwNTMzMTgxLCJuYmYiOjE1NjA1MzMxODEsImp0aSI6IlZlWjRpQ2JGbEgwVENiTk0ifQ.PH4b1oSnO1eo90HJg5qjpdExGOLzInBTX-aK6UqoP9w\"");
 
     }
+
     public void Next(View view) {
-//        String quantity    = et_quantity.getText().toString();
-//        String weight      = et_weight.getText().toString();
-//        String width       = et_width.getText().toString();
-//        String length      = et_length.getText().toString();
-//        String height      = et_height.getText().toString();
-//        String pickup      = et_Pickup.getText().toString();
-//        String destination = et_destination.getText().toString();
-//        String startD      = et_StartD.getText().toString();
-//        String endD        = et_EndD.getText().toString();
-//        SharedPreferences file = getSharedPreferences("content",MODE_PRIVATE);
-//        SharedPreferences.Editor editor = file.edit();
-//        editor.putString("quan",quantity);
-//        editor.putString("weig",weight);
-//        editor.putString("wid",width);
-//        editor.putString("len",length);
-//        editor.putString("heig",height);
-//        editor.putString("pick",pickup);
-//        editor.putString("dest",destination);
-//        editor.putString("sdate",startD);
-//        editor.putString("edate",endD);
-//        editor.commit();
-//        Toast.makeText(this, "your data has been saved", Toast.LENGTH_SHORT).show();
-//        Intent intent = new Intent(this,Confirm_R_Activity.class);
-//        startActivity(intent);
+/*        Double Total_weigth;
+      Integer quantity    = Integer.parseInt(et_quantity.getText().toString());
+        Double weight      = Double.parseDouble(et_weight.getText().toString());
+        Double width       = Double.parseDouble(et_width.getText().toString());
+        Double length      = Double.parseDouble(et_length.getText().toString());
+        Double height      = Double.parseDouble(et_height.getText().toString());
+       String pickup      = et_Pickup.getText().toString();
+      String destination = et_destination.getText().toString();
+       String startD      = et_StartD.getText().toString();
+        String endD        = et_EndD.getText().toString();
+        SharedPreferences file = getSharedPreferences("content",MODE_PRIVATE);
+       SharedPreferences.Editor editor = file.edit();
+       editor.putString("quan",quantity);
+        editor.putString("weig",weight);
+       editor.putString("wid",width);
+        editor.putString("len",length);
+       editor.putString("heig",height);
+        editor.putString("pick",pickup);
+        editor.putString("dest",destination);
+       editor.putString("sdate",startD);
+       editor.putString("edate",endD);
+
+       editor.commit();
+        Toast.makeText(this, "your data has been saved", Toast.LENGTH_SHORT).show();*/
+
         com.mohamedboltia.cargo.Model.Request request=new com.mohamedboltia.cargo.Model.Request();
         request.setCargoType("solid");
-        request.setItemHeight("");
+       request.setItemHeight(Double.valueOf(et_width.getText().toString()));
         request.setDeliverTo("ca");
-//      request.setItemHeight(height.);
-        request.setItemLength("");
-        request.setItemWeight("55");
-        request.setItemWidth("");
-        request.setQuantity("6");
-        request.setStartDate("1/2/2018");
-        request.setFinishDate("5/5/2019");
-        request.setTotalWeight("11");
-        request.setTotalVolume(22);
-        request.setPickUpLocation("misr");
-        request.setCompanyImportExport(134);
-        request.setId(134);
-        request.setUpdatedAt("s");
-        request.setCreatedAt("ss");
+   //  request.setItemHeight(height);
+       request.setItemLength(Double.valueOf(et_length .getText().toString()));
+       request.setItemWeight(Double.valueOf(et_weight.getText().toString()));
+        request.setItemWidth(Double.valueOf(et_length .getText().toString()));
+        request.setQuantity(Integer.valueOf(et_quantity.getText().toString()));
+        request.setStartDate(et_StartD.getText().toString());
+        request.setFinishDate(et_EndD.getText().toString());
+        request.setTotalWeight(77.1);
+      //  request.setTotalVolume(22);
+        request.setPickUpLocation(et_Pickup.getText().toString() );
+        request.setCompanyImportExport(133);
 
-//        request.setItemHeight("");
+     //  request.setItemHeight();
 
         requset_presenter.requset(request);
 
-
+      //  Intent intent = new Intent(this,Confirm_R_Activity.class);
+      //  startActivity(intent);
     }
 
     public void spinner (){
@@ -147,8 +149,9 @@ public class Request extends AppCompatActivity implements RequsetView {
     }
     @Override
     public void success() {
-        Intent intent = new Intent(Request.this,Drawer_Slide_Activity.class);
-        startActivity(intent);
+        Toast.makeText(this, " El 7mdllah", Toast.LENGTH_SHORT).show();
+       // Intent intent = new Intent(Request.this,Drawer_Slide_Activity.class);
+      //  startActivity(intent);
         finish();
     }
 

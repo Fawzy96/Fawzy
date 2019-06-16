@@ -19,6 +19,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
@@ -32,6 +33,9 @@ public class Contact_Fragment extends Fragment implements OnMapReadyCallback {
     GoogleMap map;
     private static final int Location_request = 500;
     ArrayList<LatLng> list_points;
+   // Marker m1,m2;
+  //  Double lati,longe;
+  //  Double lati2,longe2;
 
     public Contact_Fragment() {
         // Required empty public constructor
@@ -57,16 +61,18 @@ public class Contact_Fragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
-       /* LatLng cairo = new LatLng(30.03855885, 31.21205711);
-        map.addMarker(new MarkerOptions().position(cairo).title("Cairo"));
-        map.moveCamera(CameraUpdateFactory.newLatLng(cairo));*/
+        map.getUiSettings().setZoomControlsEnabled(true);
+//     LatLng cairo = new LatLng(30.03855885, 31.21205711);
+//     m1=map.addMarker(new MarkerOptions().position(cairo).title("Cairo"));
+//        map.moveCamera(CameraUpdateFactory.newLatLng(cairo));
+//        LatLng latLng=m1.getPosition();
         if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(getActivity(),new String[] {Manifest.permission.ACCESS_FINE_LOCATION},Location_request);
 
-            return;
+            return ;
         }
         map.setMyLocationEnabled(true);
-        map.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
+       /* map.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
             @Override
             public void onMapLongClick(LatLng latLng) {
                 //Reset marker when already 2
@@ -80,17 +86,26 @@ public class Contact_Fragment extends Fragment implements OnMapReadyCallback {
                 MarkerOptions markerOptions = new MarkerOptions();
                 markerOptions.position(latLng);
                 if (list_points.size() == 1){
+
                     //Add first marker to map
                     markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+             /*       m1=  map.addMarker(new MarkerOptions().title("Cairo").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+                   LatLng latLng1=m1.getPosition();
+                    lati=latLng1.latitude;
+                    longe=latLng1.longitude;*/
+/*
                 }else {
                     //Add second marker
                     markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+                   /* m2=  map.addMarker(new MarkerOptions().title("Cairo").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+                    LatLng latLng2=m2.getPosition();
+                    lati2=latLng2.latitude;
+                    longe2=latLng2.longitude;*//*
                 }
-                map.addMarker(markerOptions);
+                map.addMarker(markerOptions);*/
                 //todo : request get directions code bellow    
             }
-        });
-     //  map.getUiSettings().setZoomControlsEnabled(true);
+ /*       });
 
     }
 
@@ -104,5 +119,5 @@ public class Contact_Fragment extends Fragment implements OnMapReadyCallback {
                 }
                 break;
         }
-    }
+    }*/
 }

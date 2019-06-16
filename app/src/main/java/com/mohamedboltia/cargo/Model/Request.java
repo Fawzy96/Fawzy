@@ -15,19 +15,19 @@ public class Request {
     private String deliverTo;
     @SerializedName("quantity")
     @Expose
-    private String quantity;
+    private Integer quantity;
     @SerializedName("Item_Weight")
     @Expose
-    private String itemWeight;
+    private Double itemWeight;
     @SerializedName("Item_Width")
     @Expose
-    private String itemWidth;
+    private Double itemWidth;
     @SerializedName("Item_Height")
     @Expose
-    private String itemHeight;
+    private Double itemHeight;
     @SerializedName("Item_length")
     @Expose
-    private String itemLength;
+    private Double itemLength;
     @SerializedName("start_date")
     @Expose
     private String startDate;
@@ -36,7 +36,7 @@ public class Request {
     private String finishDate;
     @SerializedName("Total_Weight")
     @Expose
-    private String totalWeight;
+    private Double totalWeight;
     @SerializedName("Total_Volume")
     @Expose
     private Integer totalVolume;
@@ -77,43 +77,43 @@ public class Request {
         this.deliverTo = deliverTo;
     }
 
-    public String getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
-    public String getItemWeight() {
+    public Double getItemWeight() {
         return itemWeight;
     }
 
-    public void setItemWeight(String itemWeight) {
+    public void setItemWeight(Double itemWeight) {
         this.itemWeight = itemWeight;
     }
 
-    public String getItemWidth() {
+    public Double getItemWidth() {
         return itemWidth;
     }
 
-    public void setItemWidth(String itemWidth) {
+    public void setItemWidth(Double itemWidth) {
         this.itemWidth = itemWidth;
     }
 
-    public String getItemHeight() {
+    public Double getItemHeight() {
         return itemHeight;
     }
 
-    public void setItemHeight(String itemHeight) {
+    public void setItemHeight(Double itemHeight) {
         this.itemHeight = itemHeight;
     }
 
-    public String getItemLength() {
+    public Double getItemLength() {
         return itemLength;
     }
 
-    public void setItemLength(String itemLength) {
+    public void setItemLength(Double itemLength) {
         this.itemLength = itemLength;
     }
 
@@ -133,11 +133,11 @@ public class Request {
         this.finishDate = finishDate;
     }
 
-    public String getTotalWeight() {
+    public Double getTotalWeight() {
         return totalWeight;
     }
 
-    public void setTotalWeight(String totalWeight) {
+    public void setTotalWeight(Double totalWeight) {
         this.totalWeight = totalWeight;
     }
 
