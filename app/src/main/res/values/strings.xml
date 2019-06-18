@@ -13,4 +13,38 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Names -->
+    <string-array name="Member_names">
+        <item>Company name : El Nor  </item>
+        <item>Company name : Arab consult </item>
+        <item>Company name : Aghapy  </item>
+        <item>Company name : Organic </item>
+        <item>Company name : Al Shahbaa</item>
+
+    </string-array>
+
+    <!-- Pictures -->
+    <array name="profile_pics">
+        <item>@drawable/avatar</item>
+        <item>@drawable/starting_page</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/contact</item>
+        <item>@drawable/lightimage</item>
+        <item>@drawable/logooo</item>
+    </array>
+
+    <!-- Status -->
+    <string-array name="statues">
+        <item>You have request from import- export company </item>
+        <item>Shanni</item>
+        <item>Rachael</item>
+        <item>Maddy</item>
+        <item>Kate</item>
+        <item>Nikhil</item>
+    </string-array>
+
+    <!-- contact type -->
+
+
 </resources>

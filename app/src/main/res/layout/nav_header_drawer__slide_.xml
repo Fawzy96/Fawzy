@@ -45,7 +45,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="362dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:text="Import- Export"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -56,9 +56,9 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circleImageView9"
-        android:layout_width="69dp"
+        android:layout_width="60dp"
 
-        android:layout_height="83dp"
+        android:layout_height="60dp"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:layout_marginBottom="16dp"

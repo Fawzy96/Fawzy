@@ -68,16 +68,15 @@
         <activity
             android:name=".Mapp_Activity"
             android:label="@string/title_activity_mapp_" />
-        <activity android:name=".Request">
+        <activity android:name=".Notification_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Notification_Activity">
-
-        </activity>
+        <activity android:name=".Confirm_Reqeust_Activity"></activity>
+        <activity android:name=".Accept_Or_Ignore_Activity"></activity>
     </application>
 
 </manifest>

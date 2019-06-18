@@ -9,7 +9,7 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout3"
         android:layout_width="0dp"
-        android:layout_height="223dp"
+        android:layout_height="147dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -24,9 +24,9 @@
         app:layout_constraintVertical_bias="0.0">
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="151dp"
-            android:layout_height="141dp"
+            android:id="@+id/image_ar"
+            android:layout_width="93dp"
+            android:layout_height="106dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
@@ -35,49 +35,50 @@
             android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.081"
+            app:layout_constraintHorizontal_bias="0.086"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.48"
             app:srcCompat="@drawable/nmnm" />
 
         <TextView
-            android:id="@+id/textView31"
-            android:layout_width="305dp"
-            android:layout_height="58dp"
+            android:id="@+id/request_ar"
+            android:layout_width="185dp"
+            android:layout_height="36dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:gravity="bottom|center"
             android:hint="you have request from import company"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.828"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.414"
+            app:layout_constraintStart_toEndOf="@+id/image_ar"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.281" />
+            app:layout_constraintVertical_bias="0.284" />
 
         <TextView
-            android:id="@+id/textView32"
-            android:layout_width="267dp"
-            android:layout_height="50dp"
+            android:id="@+id/c_name"
+            android:layout_width="179dp"
+            android:layout_height="32dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:gravity="bottom|center"
             android:hint="company name"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.72"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.358"
+            app:layout_constraintStart_toEndOf="@+id/image_ar"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.789" />
+            app:layout_constraintVertical_bias="0.738" />
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
