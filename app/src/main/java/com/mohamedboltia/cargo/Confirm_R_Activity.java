@@ -9,9 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.mohamedboltia.cargo.Presenter.Requset_Presenter;
-import com.mohamedboltia.cargo.View.RequsetView;
 
-public class Confirm_R_Activity extends AppCompatActivity implements RequsetView {
+public class Confirm_R_Activity extends AppCompatActivity  {
 
     private TextView tv_quantity,tv_weight,tv_width,tv_length,
             tv_height,tv_Pickup,tv_destination,tv_StartD,tv_EndD;
@@ -42,7 +41,7 @@ public class Confirm_R_Activity extends AppCompatActivity implements RequsetView
         tv_StartD      = (TextView) findViewById(R.id.starD);
         tv_EndD        = (TextView) findViewById(R.id.endd);
         Book           =  (Button)  findViewById(R.id.Book);
-        requset_presenter=new Requset_Presenter(this,this);
+//        requset_presenter=new Requset_Presenter(this,this);
 
 //        SharedPreferences shared=getSharedPreferences( "reg",MODE_PRIVATE);
 //        token =shared.getString("token","");
@@ -74,6 +73,8 @@ public class Confirm_R_Activity extends AppCompatActivity implements RequsetView
             public void onClick(View view) {
 
 
+                Intent intent = new Intent(Confirm_R_Activity.this,Drawer_Slide_Activity.class);
+                startActivity(intent);
 
 //                com.mohamedboltia.cargo.Model.Request request=new com.mohamedboltia.cargo.Model.Request();
 //                request.setCargoType("solid");
@@ -105,15 +106,15 @@ public class Confirm_R_Activity extends AppCompatActivity implements RequsetView
 //        startActivity(intent);
 //    }
 
-    @Override
-    public void success() {
-        Intent intent = new Intent(Confirm_R_Activity.this,Add_New_Truck.class);
-        startActivity(intent);
-        finish();
-    }
-
-    @Override
-    public void Error() {
-
-    }
+//    @Override
+//    public void success() {
+//        Intent intent = new Intent(Confirm_R_Activity.this,Add_New_Truck.class);
+//        startActivity(intent);
+//        finish();
+//    }
+//
+//    @Override
+//    public void Error() {
+//
+//    }
 }

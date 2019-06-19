@@ -44,7 +44,35 @@
         <item>Nikhil</item>
     </string-array>
 
+    <string-array name="statuess">
+        <item>Transport Company Accepted Request</item>
+        <item>Transport Company Accepted Request</item>
+        <item>Transport Company Ignore Request</item>
+        <item>Transport Company Accepted Request</item>
+        <item>Transport Company Ignore Request</item>
+
+    </string-array>
     <!-- contact type -->
+
+    <string-array name="names">
+        <item>Company name : United Sons</item>
+        <item>Company name : We Move Relocation Service </item>
+        <item>Company name : TLC  </item>
+        <item>Company name : Bridge Globel Logistic </item>
+        <item>Company name : United Sons</item>
+
+    </string-array>
+
+
+    <array name="profile_piics">
+        <item>@drawable/looogo</item>
+        <item>@drawable/looooogo</item>
+        <item>@drawable/logoooo</item>
+        <item>@drawable/looogo</item>
+        <item>@drawable/looooogo</item>
+        <item>@drawable/logoooo</item>
+    </array>
+
 
 
 </resources>

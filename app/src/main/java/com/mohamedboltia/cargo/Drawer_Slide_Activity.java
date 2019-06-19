@@ -2,11 +2,8 @@ package com.mohamedboltia.cargo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentManager;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -24,7 +21,6 @@ public class Drawer_Slide_Activity extends AppCompatActivity
         setContentView(R.layout.activity_drawer__slide_);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -50,7 +46,7 @@ public class Drawer_Slide_Activity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.driver_profile, menu);
+        getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
         return true;
     }
 
@@ -62,8 +58,9 @@ public class Drawer_Slide_Activity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.acti_settings) {
+            Intent i = new Intent(Drawer_Slide_Activity.this,Nofication_Import.class);
+            startActivity(i);
         }
 
         return super.onOptionsItemSelected(item);
@@ -78,10 +75,12 @@ public class Drawer_Slide_Activity extends AppCompatActivity
         if (id == R.id.nav_profile) {
             Intent i = new Intent(Drawer_Slide_Activity.this,import_export_profile.class);
             startActivity(i);
-        } /*else if (id == R.id.Book_Transporter) {
+        } else if (id == R.id.Book_Transporter) {
 
-        } */ else if (id == R.id.payment) {
-            Intent i = new Intent(Drawer_Slide_Activity.this,add_payment.class);
+            Intent i = new Intent(Drawer_Slide_Activity.this,Request.class);
+            startActivity(i);
+        }  else if (id == R.id.payment) {
+            Intent i = new Intent(Drawer_Slide_Activity.this,Select_Payment.class);
             startActivity(i);
 
         } else if (id == R.id.current_shipment) {
@@ -97,6 +96,11 @@ public class Drawer_Slide_Activity extends AppCompatActivity
         }else if (id == R.id.help) {
 
         }
+//        else if (id== R.id.acti_settings)
+//        {
+//            Intent i = new Intent(Drawer_Slide_Activity.this,Nofication_Import.class);
+//            startActivity(i);
+//        }
 
 
         Contact_Fragment fragment =new Contact_Fragment();

@@ -19,7 +19,6 @@ public class Notification_Activity extends AppCompatActivity implements AdapterV
     TypedArray profile_pics;
     String[] statues;
 
-
     List<Row_Item> rowItems;
     ListView mylistview;
 

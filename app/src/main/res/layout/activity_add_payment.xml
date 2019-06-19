@@ -74,7 +74,8 @@
             android:background="@drawable/bar"
             android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginEnd="@dimen/_20sdp"
-            android:paddingLeft="@dimen/_15sdp"/>
+            android:paddingLeft="@dimen/_15sdp"
+            android:id="@+id/CardNumber"/>
     </RelativeLayout>
 <RelativeLayout
     android:layout_width="match_parent"
@@ -110,6 +111,7 @@
             android:layout_marginEnd="@dimen/_20sdp"
             android:paddingLeft="@dimen/_15sdp"
             android:inputType="datetime"
+            android:id="@+id/EXDate"
             />
     </RelativeLayout>
 
@@ -146,7 +148,8 @@
             android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginEnd="@dimen/_20sdp"
             android:paddingLeft="@dimen/_15sdp"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:id="@+id/CVV"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -165,6 +168,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="@color/white"
             android:textStyle="bold"
+            android:id="@+id/nextpay"
             />
     </RelativeLayout>
 </RelativeLayout>

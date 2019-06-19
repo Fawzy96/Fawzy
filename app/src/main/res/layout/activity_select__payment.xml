@@ -55,7 +55,32 @@
             android:layout_height="@dimen/_50sdp"
             android:background="@drawable/visa"
             android:layout_centerVertical="true"
+            />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="@dimen/_90sdp"
+            android:layout_marginLeft="@dimen/_90sdp"
+
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_15sdp"
+            android:id="@+id/Cardnumber1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="@dimen/_90sdp"
+            android:layout_marginLeft="@dimen/_90sdp"
+
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_15sdp"
+            android:id="@+id/cvv1"
             />
 
     </RelativeLayout>
@@ -76,6 +101,31 @@
             android:background="@drawable/mastercard"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="@dimen/_90sdp"
+            android:layout_marginLeft="@dimen/_90sdp"
+            android:text=""
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_15sdp"
+            android:id="@+id/Cardnumber2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="@dimen/_90sdp"
+            android:layout_marginLeft="@dimen/_90sdp"
+            android:text=""
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_15sdp"
+            android:id="@+id/cvv2"
+            />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -91,9 +141,34 @@
         <ImageView
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_40sdp"
-            android:background="@drawable/paypol"
+            android:background="@drawable/payp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="@dimen/_90sdp"
+            android:layout_marginLeft="@dimen/_90sdp"
+            android:text=""
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_15sdp"
+            android:id="@+id/Cardnumber3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="@dimen/_90sdp"
+            android:layout_marginLeft="@dimen/_90sdp"
+            android:text=""
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_15sdp"
+            android:id="@+id/cvv3"
+            />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
