@@ -103,7 +103,7 @@ public class Contact_Fragment extends Fragment implements OnMapReadyCallback {
                     longe2=latLng2.longitude;*//*
                 }
                 map.addMarker(markerOptions);*/
-                //todo : request get directions code bellow    
+
             }
  /*       });
 
