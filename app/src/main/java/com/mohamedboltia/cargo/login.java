@@ -10,11 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.mohamedboltia.cargo.Model.User;
 import com.mohamedboltia.cargo.Presenter.Login_Presenter;
-import com.mohamedboltia.cargo.View.LoginView;
 
-public class login extends AppCompatActivity implements LoginView {
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class login extends AppCompatActivity {
 
 
     EditText emailValidate;
@@ -37,7 +38,7 @@ public class login extends AppCompatActivity implements LoginView {
     public void initi()
     {
 
-        login_presenter=new Login_Presenter(this,this);
+//        login_presenter=new Login_Presenter(this,this);
         emailValidate=(EditText)findViewById(R.id.email);
         password=(TextInputEditText)findViewById(R.id.password);
         login=(Button)findViewById(R.id.bu_signin);
@@ -52,7 +53,6 @@ public class login extends AppCompatActivity implements LoginView {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(login.this,verify_email.class);
-
                 startActivity(intent);
             }
         });
@@ -64,7 +64,6 @@ public class login extends AppCompatActivity implements LoginView {
             public void onClick(View view) {
 
                 Intent intent = new Intent(login.this,Register_one_Activity.class);
-
                 startActivity(intent);
             }
         });
@@ -73,11 +72,11 @@ public class login extends AppCompatActivity implements LoginView {
             @Override
             public void onClick(View view) {
 
-//                SharedPreferences shared=getSharedPreferences( "reg",MODE_PRIVATE);
-//                 emaill =shared.getString("CompEmail","");
-//                passworrd=shared.getString("RTPassword","");
+                SharedPreferences shared=getSharedPreferences( "reg",MODE_PRIVATE);
+                 emaill =shared.getString("CompEmail","");
+                passworrd=shared.getString("RTPassword","");
 
-                login_presenter.login(emailValidate.getText().toString(),password.getText().toString());
+//                login_presenter.login(emailValidate.getText().toString(),password.getText().toString());
 
 
 //              if(emailValidate.getText().toString().equals(emaill) && password.getText().toString().equals(passworrd))
@@ -92,71 +91,91 @@ public class login extends AppCompatActivity implements LoginView {
 //
 //              }
 
-//                validemail = "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
-//
-//                        "\\@" +
-//
-//                        "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
-//
-//                        "(" +
-//
-//                        "\\." +
-//
-//                        "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
-//
-//                        ")+";
-//
-//                String email = emailValidate.getText().toString();
-//
-//                Matcher matcher= Pattern.compile(validemail).matcher(email);
+                validemail = "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
 
-//                if (emailValidate.getText().toString().isEmpty()||password
-//                        .getText().toString().isEmpty()||!matcher.matches())
-//                {
-//
-//                    if (password.getText().toString().isEmpty())
-//                    {
-//                        password.setError("password is empty");
-//                        // password.setTextColor(Color.RED);
-//
-//
-//                    }
-//
-//                    if (!matcher.matches())
-//                    {
-//                        emailValidate.setError("Make sure the account is correct");
-//
-//                    }
-//
-//                }
-//                else {
-//                    Intent intent = new Intent(login.this,Register_one_Activity.class);
-//
-//                    startActivity(intent);
-//                }
+                        "\\@" +
+
+                        "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+
+                        "(" +
+
+                        "\\." +
+
+                        "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+
+                        ")+";
+
+                String email = emailValidate.getText().toString();
+
+                Matcher matcher= Pattern.compile(validemail).matcher(email);
+
+                if (emailValidate.getText().toString().isEmpty()||password
+                        .getText().toString().isEmpty()||!matcher.matches()||!emailValidate.getText().toString().equals(emaill) ||
+                        !password.getText().toString().equals(passworrd))
+                {
+                    if (!emailValidate.getText().toString().equals(emaill) || !password.getText().toString().equals(passworrd))
+                    {
+                        dlgAlert.setMessage("user name or password is error");
+                        dlgAlert.show();
+                    }
+
+                    if (password.getText().toString().isEmpty())
+                    {
+                        password.setError("password is empty");
+                        // password.setTextColor(Color.RED);
+
+
+                    }
+
+                    if (!matcher.matches())
+                    {
+                        emailValidate.setError("Make sure the account is correct");
+
+                    }
+
+                }
+                else {
+                    Intent intent = new Intent(login.this,Drawer_Slide_Activity.class);
+
+                    startActivity(intent);
+                }
             }});
 }
-
-    @Override
-    public void success(User userRegister) {
 //
+//    @Override
+//    public void success(User userRegister) {
+////
+////        SharedPreferences.Editor shared = getSharedPreferences("reg", MODE_PRIVATE).edit();
+////        shared.putString("token", userRegister.getEmail());
+////        shared.commit();
+//        Intent intent = new Intent(login.this,Request.class);
+//
+//        startActivity(intent);
+//    }
+//
+//    @Override
+//    public void Token(String token) {
 //        SharedPreferences.Editor shared = getSharedPreferences("reg", MODE_PRIVATE).edit();
-//        shared.putString("token", userRegister.getEmail());
+//        shared.putString("token", token);
 //        shared.commit();
-        Intent intent = new Intent(login.this,Request.class);
+//    }
+//
+//    @Override
+//    public void Error() {
+//
+//    }
 
-        startActivity(intent);
-    }
-
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//        finish();
+//    }
     @Override
-    public void Token(String token) {
-        SharedPreferences.Editor shared = getSharedPreferences("reg", MODE_PRIVATE).edit();
-        shared.putString("token", token);
-        shared.commit();
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        finish();
     }
 
-    @Override
-    public void Error() {
 
-    }
 }

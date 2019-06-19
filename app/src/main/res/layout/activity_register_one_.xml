@@ -163,7 +163,8 @@
             android:textColor="@color/white"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_30sdp"/>
 
     </RelativeLayout>
 

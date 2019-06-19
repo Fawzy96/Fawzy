@@ -11,14 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.mohamedboltia.cargo.Model.UserRegister;
 import com.mohamedboltia.cargo.Presenter.Register_Presenter;
-import com.mohamedboltia.cargo.View.RegisterView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Register_Three_Activity extends AppCompatActivity implements RegisterView {
+public class Register_Three_Activity extends AppCompatActivity  {
     EditText edTaxCard,edTaxRegister;
     Spinner Specialization;
     Button buConfirm,BackToLogin;
@@ -31,6 +29,8 @@ public class Register_Three_Activity extends AppCompatActivity implements Regist
         ini();
         clickFun();
         spinner();
+
+
 
 
         SharedPreferences shared=getSharedPreferences( "reg",MODE_PRIVATE);
@@ -67,7 +67,7 @@ public class Register_Three_Activity extends AppCompatActivity implements Regist
     }
     public void ini()
     {
-        register_presenter=new Register_Presenter(this,this);
+//        register_presenter=new Register_Presenter(this,this);
         edTaxCard=(EditText)findViewById(R.id.edTaxCard);
         edTaxRegister=(EditText)findViewById(R.id.edTaxRegister);
         BackToLogin=(Button)findViewById(R.id.back3);
@@ -79,57 +79,55 @@ public class Register_Three_Activity extends AppCompatActivity implements Regist
         buConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if( edTaxCard.getText().toString().isEmpty() || edTaxRegister.getText().toString().isEmpty()||Specialization.getSelectedItem().toString().isEmpty())
-//                {
+                if( edTaxCard.getText().toString().isEmpty() || edTaxRegister.getText().toString().isEmpty()||Specialization.getSelectedItem().toString().isEmpty())
+                {
 ////
-                    UserRegister userRegister=new UserRegister();
-                    userRegister.setAddress(CommpAddress);
-                    userRegister.setCargo_specialization("ammm");
-                userRegister.setEmail(CompEmail);
-                userRegister.setFax("fax");
-                userRegister.setImage("ammm");
-                userRegister.setName(compName);
-                userRegister.setPassword(RTPassword);
-                userRegister.setTax_card(edTaxCard.getText().toString());
-                userRegister.setTax_file_number(edTaxRegister.getText().toString());
-                userRegister.setType(Type);
-                userRegister.setTax_register_number("register");
-                register_presenter.register(userRegister);
+//                    UserRegister userRegister=new UserRegister();
+//                    userRegister.setAddress(CommpAddress);
+//                    userRegister.setCargo_specialization("ammm");
+//                userRegister.setEmail(CompEmail);
+//                userRegister.setFax("fax");
+//                userRegister.setImage("ammm");
+//                userRegister.setName(compName);
+//                userRegister.setPassword(RTPassword);
+//                userRegister.setTax_card(edTaxCard.getText().toString());
+//                userRegister.setTax_file_number(edTaxRegister.getText().toString());
+//                userRegister.setType(Type);
+//                userRegister.setTax_register_number("register");
+//                register_presenter.register(userRegister);
 
-//                    if(edTaxCard.getText().toString().isEmpty())
-//                    {
-//                        edTaxCard.setError("Password is Empty");
-//
-//                    }
-//                    if ( edTaxRegister.getText().toString().isEmpty())
-//                    {
-//                        edTaxRegister.setError("Re-Password is Empty");
-//                    }
-//                    if (Specialization.getSelectedItem().toString().isEmpty())
-//                    {
-//
-//                    }
+                    if(edTaxCard.getText().toString().isEmpty())
+                    {
+                        edTaxCard.setError("Password is Empty");
 
-//                }
-//                else
-//                {
-//                    String eddTaxCard = edTaxCard.getText().toString();
-//                    String edTaxRegisterr = edTaxRegister.getText().toString();
-//                    String spSpeci=Specialization.getSelectedItem().toString();
-//                    SharedPreferences.Editor shared = getSharedPreferences("reg", MODE_PRIVATE).edit();
-//                    shared.putString("eddTaxCard", eddTaxCard);
-//                    shared.putString("edTaxRegisterr", edTaxRegisterr);
-//                    shared.putString("spSpeci",spSpeci);
-//                    shared.commit();
+                    }
+                    if ( edTaxRegister.getText().toString().isEmpty())
+                    {
+                        edTaxRegister.setError("Re-Password is Empty");
+                    }
+                    if (Specialization.getSelectedItem().toString().isEmpty())
+                    {
 
+                    }
 
+                }
+                else
+                {
+                    String eddTaxCard = edTaxCard.getText().toString();
+                    String edTaxRegisterr = edTaxRegister.getText().toString();
+                    String spSpeci=Specialization.getSelectedItem().toString();
+                    SharedPreferences.Editor shared = getSharedPreferences("reg", MODE_PRIVATE).edit();
+                    shared.putString("eddTaxCard", eddTaxCard);
+                    shared.putString("edTaxRegisterr", edTaxRegisterr);
+                    shared.putString("spSpeci",spSpeci);
+                    shared.commit();
 
 
 
-//                    Intent intent = new Intent(Register_Three_Activity.this,login.class);
-//                    startActivity(intent);
+                    Intent intent = new Intent(Register_Three_Activity.this,login.class);
+                    startActivity(intent);
 
-//                }
+                }
             }
         });
 
@@ -142,15 +140,15 @@ public class Register_Three_Activity extends AppCompatActivity implements Regist
         });
     }
 
-    @Override
-    public void success() {
-        Intent intent = new Intent(Register_Three_Activity.this,Drawer_Slide_Activity.class);
-        startActivity(intent);
-        finish();
-    }
-
-    @Override
-    public void Error() {
-
-    }
+//    @Override
+//    public void success() {
+//        Intent intent = new Intent(Register_Three_Activity.this,Drawer_Slide_Activity.class);
+//        startActivity(intent);
+//        finish();
+//    }
+//
+//    @Override
+//    public void Error() {
+//
+//    }
 }

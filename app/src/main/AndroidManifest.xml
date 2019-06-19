@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mohamedboltia.cargo">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -17,15 +16,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".Offer_Financial"></activity>
+        <activity android:name=".Technical_Offer" />
         <activity
             android:name=".login"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <!-- <activity android:name=".Drawer_Slide_Activity" > -->
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- <activity android:name=".Drawer_Slide_Activity" > -->
         <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
         <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
         <!-- </intent-filter> -->
         <!-- </activity> -->
@@ -68,15 +66,14 @@
         <activity
             android:name=".Mapp_Activity"
             android:label="@string/title_activity_mapp_" />
-        <activity android:name=".Notification_Activity">
+        <activity android:name=".Request">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Confirm_Reqeust_Activity"></activity>
-        <activity android:name=".Accept_Or_Ignore_Activity"></activity>
+        <activity android:name=".Notification_Activity" />
     </application>
 
 </manifest>

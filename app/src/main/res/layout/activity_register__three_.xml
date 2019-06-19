@@ -57,8 +57,8 @@
             android:background="@drawable/bar"
             android:paddingLeft="@dimen/_15sdp"
             android:id="@+id/edTaxCard"
-            android:inputType="number"
-            android:maxLength="9"
+            android:inputType="numberSigned"
+            android:maxLength="11"
             android:layout_below="@+id/textView20"
             android:layout_alignLeft="@+id/textView18"
             android:layout_alignStart="@+id/textView18" />

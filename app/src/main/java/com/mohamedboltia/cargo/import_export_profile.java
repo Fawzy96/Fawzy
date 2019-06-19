@@ -34,10 +34,14 @@ public class import_export_profile extends AppCompatActivity {
     }
     public void ini()
     {
-        texnamecompany2=(TextView)findViewById(R.id.texnamecompany2);
-        emailprofile=(TextView)findViewById(R.id.emailprofile);
-        phoneProfile=(TextView)findViewById(R.id.phoneProfile);
-        addressProfile=(TextView)findViewById(R.id.addressProfile);
-        passwordProfile=(TextView)findViewById(R.id.passwordProfile);
+        texnamecompany2=(TextView)findViewById(R.id.texnamecompany10);
+        emailprofile=(TextView)findViewById(R.id.emailprofileTransport);
+        phoneProfile=(TextView)findViewById(R.id.phoneProfileTransport);
+        addressProfile=(TextView)findViewById(R.id.addressProfileTransport);
+        passwordProfile=(TextView)findViewById(R.id.passwordProfileTransport);
+    }
+    public void onclickk()
+    {
+
     }
 }
