@@ -16,8 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Rate"></activity>
-        <activity android:name=".Offer_Financial" />
+        <activity android:name=".Offer_Financial"></activity>
         <activity android:name=".Technical_Offer" />
         <activity
             android:name=".login"
@@ -36,7 +35,7 @@
         <activity android:name=".current_shipment" />
         <activity android:name=".Enter_Code" />
         <activity android:name=".payment_card" />
-        <activity android:name=".Drawer_Slide_Activity" />
+        <activity android:name=".welcome" />
         <activity android:name=".view_transporter" />
         <activity android:name=".import_export_profile" />
         <activity android:name=".Confirm_R_Activity" />
@@ -45,13 +44,7 @@
         <activity android:name=".Add_New_Truck" />
         <activity android:name=".Register_Two_Activity" />
         <activity android:name=".Register_Three_Activity" />
-        <activity android:name=".Nofication_Import" />
-        <activity android:name=".Select_Payment" />
-        <activity android:name=".Arrive_Shipment" />
-        <activity android:name=".Your_Transporter" />
-        <activity android:name=".Select_Driver_Truck" />
-        <activity android:name=".Accept_Or_Ignore_Activity" />
-        <activity android:name=".Request" />
+        <activity android:name=".Drawer_Slide_Activity" />
         <activity
             android:name=".Register_one_Activity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -73,7 +66,7 @@
         <activity
             android:name=".Mapp_Activity"
             android:label="@string/title_activity_mapp_" />
-        <activity android:name=".welcome">
+        <activity android:name=".Request">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
